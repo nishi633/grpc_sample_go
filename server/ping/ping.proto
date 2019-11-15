@@ -5,12 +5,23 @@ package ping;
 service Ping {
   rpc Hello (HelloRequest) returns (HelloResponse) {
   }
+  rpc Goodby (GoodbyRequest) returns (GoodbyResponse) {
+  }
 }
 
+// リクエストの内容定義
 message HelloRequest {
   string toMessage = 1;
 }
 
+message GoodbyRequest {
+}
+
+// レスポンス定義
 message HelloResponse {
+  string resMessage = 1;
+}
+
+message GoodbyResponse {
   string resMessage = 1;
 }
