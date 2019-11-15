@@ -21,3 +21,12 @@ func (s *PingService) Hello(ctx context.Context, req *ping.HelloRequest) (*ping.
 
 	return &response, nil
 }
+
+func (s *PingService) Goodby(ctx context.Context, req *ping.GoodbyRequest) (*ping.GoodbyResponse, error) {
+	// 返却メッセージの作成
+	response := ping.GoodbyResponse{
+		ResMessage: "See you!",
+	}
+
+	return &response, nil
+}
